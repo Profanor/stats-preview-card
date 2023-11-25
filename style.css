@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.parent-container {
+    background-color: #0A0C1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 80vw;
+}
+.flex {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+.main-content {
+    background-color: #1B1937;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+}
+.image-container {
+    position: relative; /* apply the color directly to the image itself */
+    background-color: #AB5CDB;
+    background-image: url(/Images/Bitmap.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 180px;
+    margin-bottom: 50px; /* space between the text-box and the main content */
+}
+.text-box h1 {
+    color: white;
+    margin-bottom: 30px; /* space btw the h1 of text-box and the p of pg */
+}
+.text-box .insights {
+    color: #AB5CDB
+}
+.pg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    width: 90%;
+    height: 150px;
+}
+.pg p {
+    color: grey;
+    margin-bottom: 10px;
+}
+.counts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.counts p {
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.image-container::before { /* pseudo class for the purple overlay effect */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #AB5CDB;
+    mix-blend-mode: multiply; /* This blend mode creates a color overlay effect */
+    border-radius: 5px;
+}
+.count-item .pc {
+    color: grey;
+    font-weight: 100;
+    font-size: 9px;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    .parent-container {
+        height: 95vh;
+        width: 70vw;
+    }
+    .flex {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-content {
+        box-sizing: border-box;
+        border-bottom-right-radius: 5px;
+        height: 55vh;
+        width: 60vw;
+    }
+    .image-container {
+        border-top-left-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35vh;
+        width: 60vw;
+    }
+    .text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 180px;
+    }
+    .text-box h1 {
+        color: white;
+        text-align: center;
+    }
+    .pg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 90px;
+    }
+    .pg p {
+        text-align: center;
+    }
+    .counts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin-top: 30px;
+        margin-left: auto;
+    }
+    .counts p {
+        color: white;
+        font-weight: 800;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .count-item .pc {
+        
+        font-size: 9px;
+    }
+}
+
