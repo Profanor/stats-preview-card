@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/Inter/static/Inter-Black.ttf') format('truetype'),
+         url('/Inter/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -35,7 +40,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    height: 300px;
     width: 400px;
 }
 .image-container {
@@ -58,14 +63,19 @@ body {
     align-items: center;
     width: 90%;
     height: 180px;
-    margin-bottom: 50px; /* space between the text-box and the main content */
+    margin-bottom: 10px; /* space between the text-box and the main content */
 }
 .text-box h1 {
     color: white;
-    margin-bottom: 30px; /* space btw the h1 of text-box and the p of pg */
+    margin-top: 15px; /* space btw the h1 of text-box and the p of pg */
+    font-family: Inter, sans-serif;
+    font-size: 28px;
 }
 .text-box .insights {
     color: #AB5CDB
+}
+.wraphead {
+    
 }
 .pg {
     display: flex;
@@ -77,8 +87,11 @@ body {
     height: 150px;
 }
 .pg p {
-    color: grey;
-    margin-bottom: 10px;
+    color: rgb(165, 160, 160);
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 30px;
 }
 .counts {
     display: flex;
@@ -93,7 +106,7 @@ body {
     color: white;
     font-weight: 800;
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter;
 }
 .image-container::before { /* pseudo class for the purple overlay effect */
     content: "";
@@ -107,15 +120,17 @@ body {
     border-radius: 5px;
 }
 .count-item .pc {
-    color: grey;
-    font-weight: 100;
+    color: rgb(165, 160, 160);
+    font-weight: 400;
     font-size: 9px;
+    font-family: sans-serif;
+    line-height: 30px;
 }
 
 /* Additional styles for responsiveness */
 @media (max-width: 768px) {
     .parent-container {
-        height: 95vh;
+        height: 105vh;
         width: 70vw;
     }
     .flex {
@@ -127,7 +142,7 @@ body {
     .main-content {
         box-sizing: border-box;
         border-bottom-right-radius: 5px;
-        height: 55vh;
+        height: 65vh;
         width: 60vw;
     }
     .image-container {
@@ -145,39 +160,46 @@ body {
         align-items: center;
         width: 90%;
         height: 180px;
+        margin-bottom: 40px; 
     }
     .text-box h1 {
         color: white;
         text-align: center;
+        font-family: Inter, sans-serif;
+        font-size: 24px;
     }
     .pg {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0px auto;
         width: 90%;
         height: 90px;
     }
     .pg p {
         text-align: center;
+        line-height: 20px;
     }
     .counts {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 20px;
         align-items: center;
-        margin-top: 30px;
+        margin-top: 50px;
         margin-left: auto;
     }
     .counts p {
         color: white;
         font-weight: 800;
         font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Inter;
     }
     .count-item .pc {
-        
+        font-family: sans-serif;
         font-size: 9px;
+        line-height: 20px;
     }
 }
 
